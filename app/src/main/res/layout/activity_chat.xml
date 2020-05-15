@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorIndivateTab">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/layout_record_panel"
+        android:background="@color/colorIndivateTab">
+
+
+
+
+    <ImageButton
+        android:id="@+id/btnSend"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#00000000"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_send" />
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_200"
+        android:layout_above="@id/btnSend"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/line">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/editWriteMessage"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toStartOf="@id/btnSend"
+        android:background="@drawable/edittext_boder"
+        android:drawablePadding="20dp"
+        android:inputType="textLongMessage"
+        android:maxLines="1"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:textColorHint="#aeafaf"
+        android:textSize="15sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layout_record_panel"
+        android:paddingLeft="20dp"
+        android:layout_height="170dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#ecf95f"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_gravity="center_vertical"
+
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnAudioSend"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+
+            android:background="#00000000"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/mic_button_states"/>
+
+        <LinearLayout
+            android:id="@+id/record_panel"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_above="@id/btnAudioSend"
+            android:visibility="invisible"
+            android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_rec"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/recording_time_text"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:textSize="16dp"
+            android:textColor="#4d4c4b"
+            android:text="00:00"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

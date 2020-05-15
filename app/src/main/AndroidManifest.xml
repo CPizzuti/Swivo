@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.swivo">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Swivo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.android.swivo.MainActivity"
+            android:label="Swivo"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.android.swivo.ui.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentBackground">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.swivo.ui.RegisterActivity"
+            android:launchMode="singleTop" />
+            <!--
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent" -->
+        <activity
+            android:name="com.android.swivo.ui.ChatActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.android.swivo.MainActivity"/>
+        <activity android:name="com.android.swivo.ui.AddGroupActivity"
+            android:theme="@style/MyThemeNoActionbar"/>
+        <service android:name="com.android.swivo.service.FriendChatService"
+            android:exported="false"
+            android:persistent= "true" />
+
+
+    </application>
+
+</manifest>

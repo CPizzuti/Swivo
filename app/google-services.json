@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "768023408233",
+    "firebase_url": "https://swivo-956ec.firebaseio.com",
+    "project_id": "swivo-956ec",
+    "storage_bucket": "swivo-956ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768023408233:android:440397277b35f067",
+        "android_client_info": {
+          "package_name": "com.android.swivo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768023408233-jcc9ba0hjgo5ep18e4mosuoduejpn2p0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2YYicil7i2EooN0kpvEInfJ0ik1H-1B4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
